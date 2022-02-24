@@ -1,26 +1,31 @@
 #include <stdio.h>
 #include<string.h>
-
-int main() 
+int main()
 {
     char x[100],s[100];
-    int j,k,m;
-    printf("Enter the word ");
+    int i,j,k,l,m,n;
+    printf("Enter the word");
     fgets(x,100,stdin);
-    int i=(strlen(x)-1)/2;
-    m=i;
+    i=(strlen(x)-1)/2;
+    k=i;
     while(x[i+1]!='\0')
     {
         s[j]=x[i];
+        j++;
         i++;
-        j++;
-        printf("%s\n",s);
-
     }
-    for(k=0;k<m;k++)
+    while(l<k)
     {
-        s[j]=x[k];
-        printf("%s\n",s);
+        s[j]=x[l];
         j++;
+        l++;
+    }
+    for(m=0;m<strlen(x);m++)
+    {
+       for(n=0;n<m;n++)
+       {
+           printf("%c",s[n]);
+       }
+       printf("\n");
     }
 }
